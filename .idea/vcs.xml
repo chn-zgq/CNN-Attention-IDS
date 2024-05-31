@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$/Github/Attention-CNN-Intrusion-Detection-System" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Github/IDS" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Github/Intrusion-Detection-System" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Github/Intrusion-Detection-System-Using-CNN-and-Transfer-Learning" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Github/Intrusion-_detection_using_CNN" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Github/Network-intrusion-detection-based-on-CNN" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Github/PCA-CNN-for-Intrusion-Detection-System" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Github/Python" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Github/net_intrusion_detection" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Github/python-tutorial" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
 </project>

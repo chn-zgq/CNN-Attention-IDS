@@ -6,6 +6,9 @@ test_data_path = "./Data/TEST"
 
 df = Pre_Handle_Data(file_name=test_data_path, columns=columns)
 
+data_feature = df.columns.values.tolist()
+predict_feature = ["Predict_type"] + data_feature
+
 pre_data_list = pd.read_csv(test_data_path, names=columns)
 feature_list = pre_data_list.values.tolist()
 

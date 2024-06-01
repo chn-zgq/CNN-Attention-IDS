@@ -237,7 +237,7 @@ a {
     padding: 10px 0;
     /* 设置字体大小和颜色 */
     font-size: 15px;
-    font-family: 'Times New Roman';
+    font-family: 'Times New Roman', Times, serif;
     /* 设置字体间距 */
     letter-spacing: 1px;
     /* 设置上下边框距离 */

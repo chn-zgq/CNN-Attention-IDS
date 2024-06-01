@@ -1,5 +1,5 @@
 function change_count(i) {
-    var str = 'count_' + i;
+    let str = 'count_' + i;
     document.getElementById('count_0').style.display = "none";
     document.getElementById('count_1').style.display = "none";
     document.getElementById('count_2').style.display = "none";

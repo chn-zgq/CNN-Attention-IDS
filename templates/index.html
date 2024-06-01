@@ -12,22 +12,32 @@
 <body>
   <div class="container">
     <div class="menu">
-      <div class="name">
-        基于CNN和Attention机制的入侵检测系统
-      </div>
+      <a href="javascript:change_count(0)">
+        <div class="name">
+          基于CNN和Attention机制的入侵检测系统
+        </div>
+      </a>
       <div class="function">
-        <div>
-          <img src="../static/images/数据采集.png" style="width: 20px;height: 20px;">数据采集
-        </div>
-        <div>
-          <img src="../static/images/数据预处理.png" style="width: 20px;height: 20px;">数据预处理
-        </div>
-        <div>
-          <img src="../static/images/入侵检测.png" style="width: 20px;height: 20px;">入侵检测
-        </div>
-        <div>
-          <img src="../static/images/入侵管理.png" style="width: 20px;height: 20px;">入侵管理
-        </div>
+        <a href="javascript:change_count(1)">
+          <div>
+            <img src="../static/images/数据采集.png" style="width: 20px;height: 20px;">数据采集
+          </div>
+        </a>
+        <a href="javascript:change_count(2)">
+          <div>
+            <img src="../static/images/数据预处理.png" style="width: 20px;height: 20px;">特征解析和数据预处理
+          </div>
+        </a>
+        <a href="javascript:change_count(3)">
+          <div>
+            <img src="../static/images/入侵检测.png" style="width: 20px;height: 20px;">入侵检测
+          </div>
+        </a>
+        <a href="javascript:change_count(4)">
+          <div>
+            <img src="../static/images/入侵管理.png" style="width: 20px;height: 20px;">入侵管理
+          </div>
+        </a>
       </div>
     </div>
     <div class="structure">
@@ -37,13 +47,167 @@
       <div class="show">
         <div id="count_0" style="display: block;">
           <div style="display: flex; justify-content: center; align-items: center; width: 100%;height: 600px;">
-            <span style="font-size: 50px; font-weight: bolder; font-family:'Times New Roman', Courier, monospace;">欢迎使用基于CNN和Attention的入侵检测系统</span>
+            <span
+              style="font-size: 50px; font-weight: bolder; font-family:'Times New Roman', Courier, monospace;">欢迎使用基于CNN和Attention的入侵检测系统</span>
           </div>
         </div>
         <div id="count_1" style="display: none;">
           <div class="tmp1">
             <div class="function_name">
-              <!-- <span>数据采集</span> -->
+              <span>数据采集</span>
+            </div>
+          </div>
+          <div class="tmp2">
+            <div class="function_content">
+              <span style="color: #1a88d7;">主页 <span style="color: #707882;">/ 数据采集</span></span>
+            </div>
+            <div class="button_1">
+              <input type="text" id="inputText" name="inputText" placeholder="请输入抓取网络流量的数目">
+            </div>
+            <a href="javascript:change_sniff()">
+              <div class="button_2">
+                <span style="align-items: center;text-align: center;display: flex;">Sniff</span>
+              </div>
+            </a>
+          </div>
+          <div class="table_loc" id="pcap_table" style="display: none;">
+            <table>
+              <tr>
+                <th>Src</th>
+                <th>Dst</th>
+                <th>Src_port</th>
+                <th>Dst_port</th>
+                <th>Protocol</th>
+              </tr>
+              {% for i in pcap_list %}
+              <tr>
+                {% for j in i %}
+                <td>{{ j }}</td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+        <div id="count_2" style="display: none;">
+          <div class="tmp1">
+            <div class="function_name">
+              <span>特征解析和数据预处理</span>
+            </div>
+          </div>
+          <div class="tmp2">
+            <div class="function_content">
+              <span style="color: #1a88d7;">主页 <span style="color: #707882;">/ 特征解析和数据预处理</span></span>
+            </div>
+            <button style="width: 100px; margin-left: 50px;" onclick="upload.click()">上传<input type="file" name="upload"
+                id="upload" style="display: none;" /></button>
+            <a href="javascript:change_feature()">
+              <div class="button_2">
+                <span style="align-items: center;text-align: center;display: flex;">特征解析</span>
+              </div>
+            </a>
+            <a href="javascript:change_data_preprocess()">
+              <div class="button_2">
+                <span style="align-items: center;text-align: center;display: flex;">数据预处理</span>
+              </div>
+            </a>
+          </div>
+          <div class="table_loc" id="featute_table" style="display: none;">
+            <table>
+              <tr>
+                {% for i in feature_name %}
+                <th>{{ i }}</th>
+                {% endfor %}
+              </tr>
+              {% for i in feature_list %}
+              <tr>
+                {% for j in i %}
+                <td>{{ j }}</td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+          <div class="table_loc" id="featute_scaler_table" style="display: none;">
+            <table>
+              <tr>
+                {% for i in feature_name %}
+                <th>{{ i }}</th>
+                {% endfor %}
+              </tr>
+              {% for i in feature_scaler_list %}
+              <tr>
+                {% for j in i %}
+                <td>{{ j }}</td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+        <div id="count_3" style="display: none;">
+          <div class="tmp1">
+            <div class="function_name">
+              <span>入侵检测</span>
+            </div>
+          </div>
+          <div class="tmp2">
+            <div class="function_content">
+              <span style="color: #1a88d7;">主页 <span style="color: #707882;">/ 入侵检测</span></span>
+            </div>
+            <a href="javascript:change_data_regroup()">
+              <div class="button_2">
+                <span style="align-items: center;text-align: center;display: flex;">数据重组</span>
+              </div>
+            </a>
+            <a href="javascript:change_predict()">
+              <div class="button_2">
+                <span style="align-items: center;text-align: center;display: flex;">入侵检测</span>
+              </div>
+            </a>
+          </div>
+          <div class="table_loc" id="data_regroup_table" style="display: none;">
+            <table>
+              <tr>
+                {% for i in data_feature %}
+                <th>{{ i }}</th>
+                {% endfor %}
+              </tr>
+              {% for i in data_regroup_list %}
+              <tr>
+                {% for j in i %}
+                <td>{{ j }}</td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+          <div class="table_loc" id="predict_table" style="display: block;">
+            <table>
+              <tr>
+                {% for i in predict_feature %}
+                <th>{{ i }}</th>
+                {% endfor %}
+              </tr>
+              {% for i in result_list %}
+              <tr>
+                {% if i[0] == "Dos" or i[0] == "Probe" or i[0] == "R2L" or i[0] == "U2R" %}
+                {% for j in i %}
+                <td style="background-color: #cd3333;">{{ j }}</td>
+                {% endfor %}
+                {% else %}
+                {% for j in i %}
+                <td>{{ j }}</td>
+                {% endfor %}
+                {% endif %}
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+        <div id="count_4" style="display: none;">
+          <div class="tmp1">
+            <div class="function_name">
               <span>入侵管理</span>
             </div>
           </div>
@@ -51,24 +215,37 @@
             <div class="function_content">
               <span style="color: #1a88d7;">主页 <span style="color: #707882;">/ 入侵管理</span></span>
             </div>
-
-            <!-- <button style="width: 100px;">上传</button> -->
-            <div class="button_2">
-              <span style="align-items: center;text-align: center;display: flex;">告警管理</span>
-            </div>
-
-            <!-- <input type="text" id="inputText" name="inputText" placeholder="请输入抓取网络流量的数目"> -->
-            <!-- <span style="align-items: center;text-align: center;display: flex;">特征解析</span> -->
-
-            <div class="button_2">
-              <span style="align-items: center;text-align: center;display: flex;">系统管理</span>
-            </div>
+            <a href="javascript:change_alarm()">
+              <div class="button_2">
+                <span style="align-items: center;text-align: center;display: flex;">告警管理</span>
+              </div>
+            </a>
+            <a href="javascript:change_system_info()">
+              <div class="button_2">
+                <span style="align-items: center;text-align: center;display: flex;">系统管理</span>
+              </div>
+            </a>
           </div>
-
-          <div class="table_loc">
+          <div class="table_loc" id="alarm_table" style="display: none;">
             <table>
-
+              <tr>
+                {% for i in predict_feature %}
+                <th>{{ i }}</th>
+                {% endfor %}
+              </tr>
+              {% for i in result_list %}
+              <tr>
+                {% if i[0] == "Dos" or i[0] == "Probe" or i[0] == "R2L" or i[0] == "U2R" %}
+                {% for j in i %}
+                <td style="background-color: #cd3333;">{{ j }}</td>
+                {% endfor %}
+                {% endif %}
+              </tr>
+              {% endfor %}
             </table>
+          </div>
+          <div id="system_info">
+
           </div>
         </div>
       </div>

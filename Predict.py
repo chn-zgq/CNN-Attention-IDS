@@ -19,7 +19,7 @@ pre_dataset = scaler.fit_transform(df)
 feature_scaler = scaler.fit_transform(get_pre_file_data(file_name=test_data_path))
 feature_scaler_list = feature_scaler.tolist()
 
-data_processing = pre_dataset.tolist()
+data_regroup_list = pre_dataset.tolist()
 
 # 加载训练好的模型，假设模型名为'attention_cnn3_model.h5'
 model = tf.keras.models.load_model('cnn_attention_mode_finall.h5')
@@ -34,8 +34,8 @@ predicted_indices = np.argmax(predictions, axis=-1)
 class_name_map = {0: 'Dos', 1: 'Normal', 2: 'Probe', 3: 'R2L', 4: 'U2R'}
 
 result_list = []
-for i in range(len(data_processing)):
-    result_list.append([class_name_map[predicted_indices[i]]] + data_processing[i])
+for i in range(len(data_regroup_list)):
+    result_list.append([class_name_map[predicted_indices[i]]] + data_regroup_list[i])
 
 #
 # # 创建一个字典，用于存储各类别的计数

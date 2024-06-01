@@ -3,17 +3,20 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
 }
+
 .container {
     display: flex;
     width: 100%;
     height: 100%;
     min-height: 100vh;
 }
-.menu{
+
+.menu {
     display: flex;
     flex-direction: column;
     width: 20%;
@@ -21,6 +24,7 @@ body {
     min-height: 100vh;
     background-color: white;
 }
+
 .name {
     display: flex;
     font-size: 20px;
@@ -33,7 +37,8 @@ body {
     align-items: center;
     text-align: center;
 }
-.function{
+
+.function {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -41,11 +46,13 @@ body {
     padding-top: 10px;
     margin-left: 20px;
 }
-.function-style{
+
+.function-style {
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
-.function div{
+
+.function div {
     font-size: 20px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
@@ -55,34 +62,40 @@ body {
     color: #667987;
     align-items: center;
 }
-.function div:hover{
+
+.function div:hover {
     background-color: #f1f7f8;
     cursor: pointer;
     border-left: #1aacf6 5px solid;
     color: #1aacf6;
 }
-.function div:target{
+
+.function div:target {
     background-color: #f1f7f8;
     color: #1aacf6;
 }
-.structure{
-    width: 80%; 
+
+.structure {
+    width: 80%;
     height: 100vh;
-    background-color:#f1f7f8;
+    background-color: #f1f7f8;
 }
-.users{
+
+.users {
     display: flex;
-    background:linear-gradient(to right, #017eb2, #00bed6);
+    background: linear-gradient(to right, #017eb2, #00bed6);
     height: 9vh;
     justify-content: right;
     align-items: center;
 }
-.show{
+
+.show {
     padding-left: 15px;
     width: 100%;
     height: 91vh;
 }
-.function_name{
+
+.function_name {
     padding-top: 30px;
     padding-bottom: 10px;
     display: flex;
@@ -90,7 +103,8 @@ body {
     font-size: large;
     color: #15a3f5;
 }
-.function_content{
+
+.function_content {
     justify-content: center;
     height: 40px;
     display: flex;
@@ -100,40 +114,56 @@ body {
     /* margin-bottom: 20px;
     margin-right: 100px; */
 }
-.tmp2{
+
+.tmp2 {
     display: flex;
     align-items: center;
     justify-items: center;
 }
-.button_1{
+
+.button_1 {
     margin-left: 100px;
     width: 200px;
     height: 40px;
 }
+
 /* 基础样式 - 重置默认边框，设置通用样式 */
 #inputText {
-    width: 100%; /* 根据需要调整宽度，这里假设占据父容器全宽 */
-    padding: 10px 15px; /* 内边距增加用户友好性 */
-    font-size: 14px; /* 字体大小 */
-    border: 1px solid #ccc; /* 边框颜色和宽度 */
-    border-radius: 5px; /* 边框圆角 */
-    background-color: rgba(255, 255, 255, 0.8); /* 背景颜色，半透明效果 */
-    transition: border-color 0.3s, box-shadow 0.3s; /* 动画效果平滑过渡 */
+    width: 100%;
+    /* 根据需要调整宽度，这里假设占据父容器全宽 */
+    padding: 10px 15px;
+    /* 内边距增加用户友好性 */
+    font-size: 14px;
+    /* 字体大小 */
+    border: 1px solid #ccc;
+    /* 边框颜色和宽度 */
+    border-radius: 5px;
+    /* 边框圆角 */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* 背景颜色，半透明效果 */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* 动画效果平滑过渡 */
 }
 
 /* 焦点状态下增加高亮效果 */
 #inputText:focus {
-    outline: none; /* 移除轮廓（某些浏览器默认会有） */
-    border-color: #1a88d7; /* 焦点时的边框颜色 */
-    box-shadow: 0 0 5px rgba(26, 136, 215, 0.5); /* 鼠标聚焦时增加阴影效果 */
+    outline: none;
+    /* 移除轮廓（某些浏览器默认会有） */
+    border-color: #1a88d7;
+    /* 焦点时的边框颜色 */
+    box-shadow: 0 0 5px rgba(26, 136, 215, 0.5);
+    /* 鼠标聚焦时增加阴影效果 */
 }
 
 /* 可选 - 占位符文字样式 */
-#inputText::placeholder { 
-    color: #999; /* 占位符文字颜色 */
-    opacity: 1; /* 确保占位符可见 */
+#inputText::placeholder {
+    color: #999;
+    /* 占位符文字颜色 */
+    opacity: 1;
+    /* 确保占位符可见 */
 }
-.button_2{
+
+.button_2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,36 +175,107 @@ body {
     margin-left: 30px;
     border-radius: 5px;
 }
-.table_loc{
+
+.table_loc {
     overflow-y: auto;
     overflow-x: auto;
-    height: 600px;
-    padding-top: 20px;
+    height: 550px;
+    margin-top: 20px;   
+}
+
+.table_loc::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.table_loc::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: #c3c3c3;
+}
+
+.table_loc::-webkit-scrollbar-track {
+    background-color: transparent;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-  }
+}
+
 td {
     padding: 8px;
     text-align: left;
     color: #7a7f83;
     height: 40px;
-  }
-tr{
+}
+
+tr {
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
+
 th {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     position: sticky;
     text-align: left;
-    background-color: #f2f2f2; /* 浅灰背景颜色 */
+    background-color: #f2f2f2;
+    /* 浅灰背景颜色 */
     height: 40px;
     padding: 5px;
-  }
-  a{
+}
+
+a {
     text-decoration: none;
-  }
+}
+
+.input_box input {
+    /* 输入框设置 */
+    width: 100%;
+    padding: 10px 0;
+    /* 设置字体大小和颜色 */
+    font-size: 15px;
+    font-family: 'Times New Roman';
+    /* 设置字体间距 */
+    letter-spacing: 1px;
+    /* 设置上下边框距离 */
+    margin-bottom: 20px;
+    /* 去除input边框 */
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+}
+.input_box p{
+    font-weight: bold;
+    color: #707082;
+}
+
+.input::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.input::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: #c3c3c3;
+}
+
+.input::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.countrylist {
+    background: #fafdfe;
+    height: 28px;
+    width: 180px;
+    line-height: 28px;
+    border: 1px solid #9bc0dd;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}

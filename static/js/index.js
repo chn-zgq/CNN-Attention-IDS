@@ -54,3 +54,9 @@ function change_system_info() {
     document.getElementById('alarm_table').style.display = "none";
     document.getElementById('system_info').style.display = "block";
 }
+function update_profile(){
+    setTimeout(function () {
+        alert("Profile Updated!");
+    }
+        , 500);
+}

@@ -182,7 +182,7 @@
               {% endfor %}
             </table>
           </div>
-          <div class="table_loc" id="predict_table" style="display: block;">
+          <div class="table_loc" id="predict_table" style="display: none;">
             <table>
               <tr>
                 {% for i in predict_feature %}
@@ -193,7 +193,7 @@
               <tr>
                 {% if i[0] == "Dos" or i[0] == "Probe" or i[0] == "R2L" or i[0] == "U2R" %}
                 {% for j in i %}
-                <td style="background-color: #cd3333;">{{ j }}</td>
+                <td style="background-color: #cc3333;">{{ j }}</td>
                 {% endfor %}
                 {% else %}
                 {% for j in i %}
@@ -237,7 +237,7 @@
               <tr>
                 {% if i[0] == "Dos" or i[0] == "Probe" or i[0] == "R2L" or i[0] == "U2R" %}
                 {% for j in i %}
-                <td style="background-color: #cd3333;">{{ j }}</td>
+                <td style="background-color: #cc3333;">{{ j }}</td>
                 {% endfor %}
                 {% endif %}
               </tr>

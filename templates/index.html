@@ -1,230 +1,80 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CNN-Attention-Based-Intrusion-Detection</CNN-A></title>
-	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CNN-Attention-Based-Intrusion-Detection</CNN-A></title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+  <script type="text/javascript" src="../static/js/index.js"></script>
 </head>
+
 <body>
-	<div class="container">
-        <div class="menu">
-            <div class="name">
-                基于CNN和Attention机制的入侵检测系统
-            </div>
-            <div class="function">
-                <div >
-                    <img src="../static/images/数据采集.png" style="width: 20px;height: 20px;">数据采集
-                </div>
-                <div>
-                    <img src="../static/images/数据预处理.png" style="width: 20px;height: 20px;">数据预处理
-                </div>
-                <div>
-                    <img src="../static/images/入侵检测.png" style="width: 20px;height: 20px;">入侵检测
-                </div>
-                <div>
-                    <img src="../static/images/入侵管理.png" style="width: 20px;height: 20px;">入侵管理
-                </div>
-            </div>
+  <div class="container">
+    <div class="menu">
+      <div class="name">
+        基于CNN和Attention机制的入侵检测系统
+      </div>
+      <div class="function">
+        <div>
+          <img src="../static/images/数据采集.png" style="width: 20px;height: 20px;">数据采集
         </div>
-        <div class="structure">
-            <div class="users">
-                <img src="../static/images/用户.png" style="width: 50px;height: 50px;">
-            </div>
-            <div class="show">
-                <div class="tmp1">
-                    <div class="function_name">
-                        <!-- <span>数据采集</span> -->
-                        <span>入侵管理</span>
-                    </div>
-                </div>
-                <div class="tmp2">
-                    <div class="function_content">
-                        <span style="color: #1a88d7;">主页 <span style="color: #707882;">/  入侵管理</span></span>
-                    </div>
-                    
-                        <!-- <button style="width: 100px;">上传</button> -->
-                    <div class="button_2">
-                        <span style="align-items: center;text-align: center;display: flex;">告警管理</span>
-                    </div>
-                    
-                        <!-- <input type="text" id="inputText" name="inputText" placeholder="请输入抓取网络流量的数目"> -->
-                        <!-- <span style="align-items: center;text-align: center;display: flex;">特征解析</span> -->
-                    
-                    <div class="button_2">
-                        <span style="align-items: center;text-align: center;display: flex;">系统管理</span>
-                    </div>
-                </div>
-                
-                <div class="table_loc">
-                    <table>
-                        <tr>
-                            <th>prediction</th>
-                          <th>duration</th>
-                          <th>protocol</th>
-                          <th>service</th>
-                          <th>flag</th>
-                          <th>src_bytes</th>
-                          <th>dst_bytes</th>
-                          <th>land</th>
-                          <th>wrong_fragment</th>
-                          <th>urgent</th>
-                          <th>hot</th>
-                          <th>num_failed_logins</th>
-                          <th>logged_in</th>
-                          <th>num_compromised</th>
-                          <th>root_shell</th>
-                          <th>su_attempted</th>
-                          <th>num_root</th>
-                          <th>num_file_creations</th>
-                          <th>num_shells</th>
-                          <th>num_access_files</th>
-                          <th>num_outbound_cmds</th>
-                          <th>is_host_login</th>
-                          <th>is_guest_login</th>
-                          <th>count</th>
-                          <th>srv_count</th>
-                          <th>serror_rate</th>
-                          <th>srv_serror_rate</th>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                      </table>                      
-                </div>
-            </div>
+        <div>
+          <img src="../static/images/数据预处理.png" style="width: 20px;height: 20px;">数据预处理
         </div>
+        <div>
+          <img src="../static/images/入侵检测.png" style="width: 20px;height: 20px;">入侵检测
+        </div>
+        <div>
+          <img src="../static/images/入侵管理.png" style="width: 20px;height: 20px;">入侵管理
+        </div>
+      </div>
     </div>
+    <div class="structure">
+      <div class="users">
+        <img src="../static/images/用户.png" style="width: 50px;height: 50px;">
+      </div>
+      <div class="show">
+        <div id="count_0" style="display: block;">
+          <div style="display: flex; justify-content: center; align-items: center; width: 100%;height: 600px;">
+            <span style="font-size: 50px; font-weight: bolder; font-family:'Times New Roman', Courier, monospace;">欢迎使用基于CNN和Attention的入侵检测系统</span>
+          </div>
+        </div>
+        <div id="count_1" style="display: none;">
+          <div class="tmp1">
+            <div class="function_name">
+              <!-- <span>数据采集</span> -->
+              <span>入侵管理</span>
+            </div>
+          </div>
+          <div class="tmp2">
+            <div class="function_content">
+              <span style="color: #1a88d7;">主页 <span style="color: #707882;">/ 入侵管理</span></span>
+            </div>
+
+            <!-- <button style="width: 100px;">上传</button> -->
+            <div class="button_2">
+              <span style="align-items: center;text-align: center;display: flex;">告警管理</span>
+            </div>
+
+            <!-- <input type="text" id="inputText" name="inputText" placeholder="请输入抓取网络流量的数目"> -->
+            <!-- <span style="align-items: center;text-align: center;display: flex;">特征解析</span> -->
+
+            <div class="button_2">
+              <span style="align-items: center;text-align: center;display: flex;">系统管理</span>
+            </div>
+          </div>
+
+          <div class="table_loc">
+            <table>
+
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
+
 </html>

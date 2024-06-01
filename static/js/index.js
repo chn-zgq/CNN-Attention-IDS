@@ -28,7 +28,7 @@ function change_data_preprocess() {
         document.getElementById('featute_table').style.display = "none";
         document.getElementById('featute_scaler_table').style.display = "block";
     }
-        , 1500);
+        , 2500);
 }
 function change_data_regroup() {
     setTimeout(function () {
@@ -36,7 +36,7 @@ function change_data_regroup() {
         document.getElementById('predict_table').style.display = "none";
         document.getElementById('data_regroup_table').style.display = "block";
     }
-        , 1000);
+        , 1500);
 }
 function change_predict() {
     setTimeout(function () {
